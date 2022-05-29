@@ -17,7 +17,7 @@ import (
 	"time"
 )
 
-var flagAddr = flag.String("addr", "0.0.0.0:80", "http server listening address")
+var flagAddr = flag.String("addr", ":80", "http server listening address")
 var flagHost = flag.String("host", "https://api.web3.storage", "web3storage host")
 var flagToken = flag.String("token", "", "web3storage token")
 
