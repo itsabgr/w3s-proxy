@@ -6,14 +6,14 @@ description: web3.storage proxy
 grade: stable
 confinement: strict
 parts:
-  web3storage-proxy:
+  w3s-proxy:
     plugin: go
     source-type: git
     source: https://github.com/itsabgr/w3s-proxy
 apps:
   w3s-proxy:
     daemon: simple
-    command: bin/w3s-proxy -addr 0.0.0.0:3333
+    command: bin/w3s-proxy -addr 0.0.0.0:80
     stop-timeout: 10s
     stop-mode: sigterm
     install-mode: enable
