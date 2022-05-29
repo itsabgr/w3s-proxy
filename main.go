@@ -60,6 +60,7 @@ func main() {
 				ctx.SetBodyString(limitedString(err.Error(), 200))
 				return
 			}
+			ctx.SetStatusCode(resp.StatusCode)
 			ctx.SetContentType(resp.Header.Get("Content-Type"))
 			ctx.SetBodyStream(resp.Body, int(resp.ContentLength))
 			return
